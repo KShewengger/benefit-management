@@ -17,12 +17,14 @@ export class EmployeeSeederService {
     private readonly employeeRepository: Repository<Employee>,
   ) {}
 
-  create(): Array<Promise<EmployeeModel>> {
-    return EMPLOYEES.map(async (company: EmployeeModel) => {
-      return await this.employeeRepository
-        .save(company)
-        .catch(error => Promise.reject(error));
-    });
+  async create(): Promise<number> {
+    for (const employee of EMPLOYEES) {
+      await this.employeeRepository
+        .save(employee)
+        .catch(error => Promise.reject(error))
+    }
+
+    return Promise.resolve(EMPLOYEES.length);
   }
 
 }

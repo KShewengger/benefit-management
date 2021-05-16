@@ -1,4 +1,4 @@
-import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
+import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn, RelationId } from 'typeorm';
 
 import { Company } from '@companies/common/company.entity';
 
@@ -13,7 +13,10 @@ export class Employee extends BaseEntity {
   name: string;
 
   @ManyToOne(type => Company, company => company.employees, { eager: false })
+  @JoinColumn({ name: 'companyId' })
   company: Company;
 
-}
+  @Column()
+  companyId: number;
 
+}

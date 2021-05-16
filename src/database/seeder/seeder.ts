@@ -14,7 +14,7 @@ export class Seeder {
 
   async seed() {
     await Promise
-      .all([ this.companies(), this.employees () ])
+      .all([ this.companies(), this.employees() ])
       .then(completed => {
         this.logger.debug('Successfully completed seeding...');
         Promise.resolve(completed);
@@ -37,9 +37,9 @@ export class Seeder {
 
   async employees() {
     return await Promise
-      .all(this.employeeSeederService.create())
+      .resolve(this.employeeSeederService.create())
       .then(employees => {
-        this.logger.debug(`No. of employees created: ${ employees.filter(employee => employee).length }`);
+        this.logger.debug(`No. of employees created: ${ employees }`);
         return Promise.resolve(true);
       })
       .catch(error => Promise.reject(error));
