@@ -6,7 +6,7 @@ import { Partner } from '@partners/common/partner.entity';
 import { PartnerRevenueResponse } from '@partners/common/partner.model';
 
 
-@Controller('companies')
+@Controller('partners')
 export class PartnersController {
 
   private logger = new Logger('PartnersController');
