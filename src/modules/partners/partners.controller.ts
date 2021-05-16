@@ -18,7 +18,7 @@ export class PartnersController {
     return this.PartnerService.getAllPartners();
   }
 
-  @Get('/:id/employees')
+  @Get('/:id/revenue')
   async getPartnerEmployees(
     @Param('id', ParseIntPipe) id: number
   ): Promise<PartnerRevenueResponse[]> {
