@@ -10,8 +10,6 @@ export class PartnerType {
   @Field()
   name: string;
 
-  // voucher
-
 }
 
 @ObjectType('PartnerRevenue')

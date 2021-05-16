@@ -1,13 +1,18 @@
 import { Resolver, Query } from '@nestjs/graphql';
 
-import { PartnerRevenueType } from '@partners/common/partner.type';
+import { PartnerType, PartnerRevenueType } from '@partners/common/partner.type';
 import { PartnerService } from '@partners/providers/partner.service';
 
 
-@Resolver(() => PartnerRevenueType)
+@Resolver(() => PartnerType)
 export class PartnerResolver {
 
   constructor(private partnerService: PartnerService) {}
+
+  @Query(returns => [PartnerType])
+  async partners() {
+    return this.partnerService.getAllPartners();
+  }
 
   @Query(returns => [PartnerRevenueType])
   async partnerRevenue() {
