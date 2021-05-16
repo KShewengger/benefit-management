@@ -1,22 +1,29 @@
-import { Resolver, Query } from '@nestjs/graphql';
+import { Resolver, Query, ResolveField, Parent } from "@nestjs/graphql";
 
-import { EmployeeType, EmployeeExpenditureType } from '@employees/common/employee.type';
+import { EmployeeType } from '@employees/common/employee.type';
 import { EmployeeService } from '@employees/providers/employee.service';
+import { Employee } from '@employees/common/employee.entity';
+
+import { Company } from '@companies/common/company.entity';
+import { CompanyService } from '@shared/company/company.service';
 
 
-@Resolver(() => EmployeeExpenditureType)
+@Resolver(() => EmployeeType)
 export class EmployeeResolver {
 
-  constructor(private employeeService: EmployeeService) {}
+  constructor(
+    private employeeService: EmployeeService,
+    private companyService: CompanyService
+  ) {}
 
-  @Query(returns => [EmployeeType])
+  @Query(() => [ EmployeeType ])
   async employees() {
     return this.employeeService.getAllEmployees();
   }
 
-  @Query(returns => [EmployeeExpenditureType])
-  async employeesExpenditures() {
-    return [];
+  @ResolveField(() => Company)
+  async company(@Parent() employee: Employee) {
+    return this.companyService.getCompany(employee.companyId);
   }
 
 }

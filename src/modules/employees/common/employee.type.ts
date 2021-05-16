@@ -15,7 +15,7 @@ export class EmployeeType {
   @Field(type => Int)
   monthlyBudget: number;
 
-  @Field(type => [CompanyType])
+  @Field(type => CompanyType)
   company: CompanyType
 
 }

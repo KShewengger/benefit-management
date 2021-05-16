@@ -4,8 +4,6 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
 import { Employee } from '@employees/common/employee.entity';
-import { GetEmployeesExpendituresFilterDto } from '@employees/common/employee.dto';
-import { EmployeeExpenditureResponse } from '@employees/common/employee.model';
 
 
 @Injectable()
@@ -18,13 +16,6 @@ export class EmployeeService {
 
   async getAllEmployees(): Promise<Employee[]> {
     return this.employeeRepository.find();
-  }
-
-  async getEmployeesExpenditures(
-    id: number,
-    filterDto: GetEmployeesExpendituresFilterDto
-  ): Promise<EmployeeExpenditureResponse[]> {
-    return [];
   }
 
 }

@@ -15,7 +15,7 @@ export class Employee extends BaseEntity {
   @Column()
   monthlyBudget: number;
 
-  @ManyToOne(type => Company, company => company.employees, { eager: false })
+  @ManyToOne(() => Company, company => company.employees, { eager: false })
   @JoinColumn({ name: 'companyId' })
   company: Company;
 
