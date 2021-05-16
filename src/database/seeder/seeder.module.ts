@@ -4,6 +4,7 @@ import { TypeOrmProviderModule } from '@providers/typeorm/typeorm.module';
 import { CompanySeederModule } from '@seeder/company/company.module';
 import { EmployeeSeederModule } from '@seeder/employee/employee.module';
 import { PartnerSeederModule } from '@seeder/partner/partner.module';
+import { VoucherSeederModule } from '@seeder/voucher/voucher.module';
 
 import { Seeder } from '@seeder/seeder';
 
@@ -13,7 +14,8 @@ import { Seeder } from '@seeder/seeder';
     TypeOrmProviderModule,
     CompanySeederModule,
     EmployeeSeederModule,
-    PartnerSeederModule
+    PartnerSeederModule,
+    VoucherSeederModule
   ],
   providers: [
     Logger,

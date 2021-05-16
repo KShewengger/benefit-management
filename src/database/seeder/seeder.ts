@@ -3,15 +3,17 @@ import { Injectable, Logger } from '@nestjs/common';
 import { CompanySeederService } from '@seeder/company/company.service';
 import { EmployeeSeederService } from '@seeder/employee/employee.service';
 import { PartnerSeederService } from '@seeder/partner/partner.service';
+import { VoucherSeederService } from '@seeder/voucher/voucher.service';
 
 
 @Injectable()
 export class Seeder {
   constructor(
-    private readonly logger: Logger,
-    private readonly companySeederService: CompanySeederService,
-    private readonly employeeSeederService: EmployeeSeederService,
-    private readonly partnerSeederService: PartnerSeederService
+    private logger: Logger,
+    private companySeederService: CompanySeederService,
+    private employeeSeederService: EmployeeSeederService,
+    private partnerSeederService: PartnerSeederService,
+    private voucherSeederService: VoucherSeederService
   ) {}
 
   async seed() {
@@ -19,7 +21,8 @@ export class Seeder {
       .all([
         this.companies,
         this.employees,
-        this.partners
+        this.partners,
+        this.vouchers
       ])
       .then(completed => {
         this.logger.debug('Successfully completed seeding...');
@@ -40,16 +43,20 @@ export class Seeder {
       .catch(error => Promise.reject(error));
   }
 
-  get companies() {
+  get companies(): Promise<boolean> {
     return this.seeder('companies', this.companySeederService);
   }
 
-  get employees() {
+  get employees(): Promise<boolean> {
     return this.seeder('employees', this.employeeSeederService);
   }
 
-  get partners() {
+  get partners(): Promise<boolean> {
     return this.seeder('partners', this.partnerSeederService);
+  }
+
+  get vouchers(): Promise<boolean> {
+    return this.seeder('vouchers', this.voucherSeederService);
   }
 
 }
