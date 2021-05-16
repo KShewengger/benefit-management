@@ -1,6 +1,7 @@
-import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn, RelationId } from 'typeorm';
+import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn, OneToOne } from 'typeorm';
 
 import { Company } from '@companies/common/company.entity';
+import { Budget } from '@budgets/common/budget.entity';
 
 
 @Entity()
@@ -18,5 +19,12 @@ export class Employee extends BaseEntity {
 
   @Column()
   companyId: number;
+
+  @OneToOne(type => Budget, budget => budget.employees, { eager: false })
+  @JoinColumn({ name: 'budgetId' })
+  budget: Budget;
+
+  @Column()
+  budgetId: number;
 
 }
