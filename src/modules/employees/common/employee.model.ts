@@ -1,7 +1,8 @@
 export interface EmployeeModel {
   readonly id: number;
-  name: string;
   companyId: number;
+  name: string;
+  monthly_budget: number;
 }
 
 export interface EmployeeExpenditureResponse extends EmployeeModel {

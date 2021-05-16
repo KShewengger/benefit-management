@@ -10,7 +10,10 @@ export class EmployeeType {
   id: number;
 
   @Field()
-  title: string;
+  name: string;
+
+  @Field(type => Int)
+  monthly_budget: number;
 
   @Field(type => [CompanyType])
   company: CompanyType
