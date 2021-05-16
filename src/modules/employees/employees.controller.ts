@@ -19,7 +19,7 @@ export class EmployeesController {
     return this.employeeService.getAllEmployees();
   }
 
-  @Get('/:id/employees')
+  @Get('/expenditures')
   async getEmployeesExpenditures(
     @Param('id', ParseIntPipe) id: number,
     @Query(ValidationPipe) filterDto: GetEmployeesExpendituresFilterDto
