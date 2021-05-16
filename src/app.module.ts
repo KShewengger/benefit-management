@@ -3,6 +3,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 
 import { TypeOrmProviderModule } from '@providers/typeorm/typeorm.module';
 import { CompaniesModule } from '@companies/companies.module';
+import { EmployeesModule } from '@employees/employees.module';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -14,7 +15,8 @@ import { AppService } from './app.service';
       autoSchemaFile: true
     }),
     TypeOrmProviderModule,
-    CompaniesModule
+    CompaniesModule,
+    EmployeesModule
   ],
   controllers: [ AppController ],
   providers: [ AppService ],

@@ -1,8 +1,8 @@
 import { ObjectType, Field, ID, Int } from '@nestjs/graphql';
 
 
-@ObjectType('Company')
-export class CompanyType {
+@ObjectType('Employee')
+export class EmployeeType {
 
   @Field(type => ID)
   id: number;
@@ -12,8 +12,8 @@ export class CompanyType {
 
 }
 
-@ObjectType('CompanyEmployee')
-export class CompanyEmployeeType {
+@ObjectType('EmployeeExpenditure')
+export class EmployeeExpenditureType {
 
   @Field(type => ID)
   employee_id: number;
@@ -21,13 +21,13 @@ export class CompanyEmployeeType {
   @Field()
   employee_name: string;
 
-  @Field()
-  company_name: string;
+  @Field(type => Int)
+  total_spent: number;
 
   @Field(type => Int)
-  total: number;
+  net_salary: number;
 
-  @Field()
-  date: Date;
+  @Field(type => Int)
+  tax: number;
 
 }
