@@ -6,16 +6,16 @@ import { EmployeeType } from '@employees/common/employee.type';
 @ObjectType('Company')
 export class CompanyType {
 
-  @Field(type => ID)
+  @Field(() => ID)
   id: number;
 
   @Field()
   title: string;
 
-  @Field(type => [EmployeeType])
-  employee: EmployeeType
+  @Field(() => [ EmployeeType ])
+  employees: EmployeeType[]
 
-  @Field(type => Int)
+  @Field(() => Int)
   total: number;
 
   @Field()

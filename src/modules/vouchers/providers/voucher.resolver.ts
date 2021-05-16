@@ -9,7 +9,7 @@ export class VoucherResolver {
 
   constructor(private voucherService: VoucherService) {}
 
-  @Query(returns => [VoucherType])
+  @Query(() => [ VoucherType ])
   async vouchers() {
     return this.voucherService.getAllVouchers();
   }

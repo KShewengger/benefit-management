@@ -15,10 +15,11 @@
       "@config/*": ["src/config/*"],
       "@providers/*": ["src/providers/*"],
       "@seeder/*": ["src/database/seeder/*"],
+      "@shared/*": ["src/modules/shared/*"],
       "@companies/*": ["src/modules/companies/*"],
       "@employees/*": ["src/modules/employees/*"],
       "@partners/*": ["src/modules/partners/*"],
-      "@vouchers/*": ["src/modules/vouchers/*"]
+      "@vouchers/*": ["src/modules/vouchers/*"],
     }
   }
 }
