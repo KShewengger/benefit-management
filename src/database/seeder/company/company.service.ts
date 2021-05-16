@@ -24,4 +24,5 @@ export class CompanySeederService {
         .catch(error => Promise.reject(error));
     });
   }
+
 }

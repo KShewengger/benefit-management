@@ -6,7 +6,7 @@ import { CompanySeederService } from './company.service';
 
 
 @Module({
-  imports: [ TypeOrmModule.forFeature([Company]) ],
+  imports: [ TypeOrmModule.forFeature([ Company ]) ],
   providers: [ CompanySeederService ],
   exports: [ CompanySeederService ],
 })
