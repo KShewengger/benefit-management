@@ -13,12 +13,12 @@ export class VoucherSeederService {
 
   constructor(
     @InjectRepository(Voucher)
-    private readonly partnerRepository: Repository<Voucher>,
+    private readonly voucherRepository: Repository<Voucher>,
   ) {}
 
   async create(): Promise<number> {
     for (const voucher of VOUCHERS) {
-      await this.partnerRepository
+      await this.voucherRepository
         .save(voucher)
         .catch(error => Promise.reject(error))
     }

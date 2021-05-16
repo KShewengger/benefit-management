@@ -4,7 +4,7 @@ export interface PartnerModel {
 }
 
 export interface PartnerRevenueResponse extends PartnerModel {
-  voucher_quantity_sold: number;
-  voucher_amount: number;
-  total_revenue: number;
+  voucherQuantitySold: number;
+  voucherAmount: number;
+  totalRevenue: number;
 }

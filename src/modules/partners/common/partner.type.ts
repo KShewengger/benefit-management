@@ -10,15 +10,18 @@ export class PartnerType {
   @Field()
   name: string;
 
+  @Field(type => Int)
+  voucherId: number;
+
 }
 
 @ObjectType('PartnerRevenue')
 export class PartnerRevenueType extends PartnerType {
 
   @Field(type => Int)
-  voucher_quantity_sold: number;
+  voucherQuantitySold: number;
 
   @Field(type => Int)
-  total_revenue: number;
+  totalRevenue: number;
 
 }

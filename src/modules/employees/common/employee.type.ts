@@ -13,7 +13,7 @@ export class EmployeeType {
   name: string;
 
   @Field(type => Int)
-  monthly_budget: number;
+  monthlyBudget: number;
 
   @Field(type => [CompanyType])
   company: CompanyType
@@ -26,10 +26,10 @@ export class EmployeeExpenditureType extends EmployeeType {
   // orders
 
   @Field(type => Int)
-  total_spent: number;
+  totalSpent: number;
 
   @Field(type => Int)
-  net_salary: number;
+  netSalary: number;
 
   @Field(type => Int)
   tax: number;

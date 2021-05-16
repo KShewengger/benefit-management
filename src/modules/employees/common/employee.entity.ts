@@ -13,7 +13,7 @@ export class Employee extends BaseEntity {
   name: string;
 
   @Column()
-  monthly_budget: number;
+  monthlyBudget: number;
 
   @ManyToOne(type => Company, company => company.employees, { eager: false })
   @JoinColumn({ name: 'companyId' })

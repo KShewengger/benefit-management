@@ -5,7 +5,7 @@ export class GetCompanyEmployeesFilterDto {
 
   @IsOptional()
   @IsInt()
-  max_benefit: number;
+  maxBenefit: number;
 
   @IsOptional()
   @IsDate()

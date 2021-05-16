@@ -4,8 +4,8 @@ export interface CompanyModel {
 }
 
 export interface CompanyEmployeesResponse extends CompanyModel {
-  employee_id: number;
-  employee_name: string;
+  employeeId: number;
+  employeeName: string;
   total: number;
   date: Date;
 }

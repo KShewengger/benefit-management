@@ -5,7 +5,7 @@ export class GetEmployeesExpendituresFilterDto {
 
   @IsOptional()
   @IsInt()
-  company_id: number;
+  companyId: number;
 
   @IsOptional()
   @IsDate()
