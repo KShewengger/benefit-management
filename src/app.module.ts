@@ -5,6 +5,7 @@ import { TypeOrmProviderModule } from '@providers/typeorm/typeorm.module';
 import { CompaniesModule } from '@companies/companies.module';
 import { EmployeesModule } from '@employees/employees.module';
 import { PartnersModule } from '@partners/partners.module';
+import { VouchersModule } from '@vouchers/vouchers.module';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -18,7 +19,8 @@ import { AppService } from './app.service';
     TypeOrmProviderModule,
     CompaniesModule,
     EmployeesModule,
-    PartnersModule
+    PartnersModule,
+    VouchersModule
   ],
   controllers: [ AppController ],
   providers: [ AppService ],
