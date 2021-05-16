@@ -4,7 +4,6 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
 import { Company } from '@companies/common/company.entity';
-import { CompanyModel } from '@companies/common/company.model';
 
 import { COMPANIES } from './company.data';
 
@@ -17,12 +16,14 @@ export class CompanySeederService {
     private readonly companyRepository: Repository<Company>,
   ) {}
 
-  create(): Array<Promise<CompanyModel>> {
-    return COMPANIES.map(async (company: CompanyModel) => {
-      return await this.companyRepository
+  async create(): Promise<number> {
+    for (const company of COMPANIES) {
+      await this.companyRepository
         .save(company)
-        .catch(error => Promise.reject(error));
-    });
+        .catch(error => Promise.reject(error))
+    }
+
+    return Promise.resolve(COMPANIES.length);
   }
 
 }

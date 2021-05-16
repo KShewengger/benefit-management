@@ -3,6 +3,7 @@ import { Logger, Module } from '@nestjs/common';
 import { TypeOrmProviderModule } from '@providers/typeorm/typeorm.module';
 import { CompanySeederModule } from '@seeder/company/company.module';
 import { EmployeeSeederModule } from '@seeder/employee/employee.module';
+import { PartnerSeederModule } from '@seeder/partner/partner.module';
 
 import { Seeder } from '@seeder/seeder';
 
@@ -11,7 +12,8 @@ import { Seeder } from '@seeder/seeder';
   imports: [
     TypeOrmProviderModule,
     CompanySeederModule,
-    EmployeeSeederModule
+    EmployeeSeederModule,
+    PartnerSeederModule
   ],
   providers: [
     Logger,

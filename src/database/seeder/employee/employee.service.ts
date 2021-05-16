@@ -4,7 +4,6 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
 import { Employee } from '@employees/common/employee.entity';
-import { EmployeeModel } from '@employees/common/employee.model';
 
 import { EMPLOYEES } from './employee.data';
 
