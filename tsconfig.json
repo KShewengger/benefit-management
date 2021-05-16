@@ -13,7 +13,8 @@
     "incremental": true,
     "paths": {
       "@config/*": ["src/config/*"],
-      "@providers/*": ["src/providers/*"]
+      "@providers/*": ["src/providers/*"],
+      "@companies/*": ["src/modules/companies/*"]
     }
   }
 }
