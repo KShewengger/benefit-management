@@ -1,4 +1,4 @@
-import { Resolver, Query } from '@nestjs/graphql';
+import { Resolver, Query, Args } from '@nestjs/graphql';
 
 import { CompanyType, CompanyEmployeeType } from '@companies/common/company.type';
 import { CompanyService } from '@companies/providers/company.service';

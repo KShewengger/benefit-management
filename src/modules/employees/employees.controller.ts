@@ -10,7 +10,7 @@ import { EmployeeExpenditureResponse } from '@employees/common/employee.model';
 @Controller('employees')
 export class EmployeesController {
 
-  private logger = new Logger('CompaniesController');
+  private logger = new Logger('EmployeesController');
 
   constructor(private employeeService: EmployeeService) {}
 

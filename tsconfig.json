@@ -16,7 +16,8 @@
       "@providers/*": ["src/providers/*"],
       "@seeder/*": ["src/database/seeder/*"],
       "@companies/*": ["src/modules/companies/*"],
-      "@employees/*": ["src/modules/employees/*"]
+      "@employees/*": ["src/modules/employees/*"],
+      "@partners/*": ["src/modules/partners/*"]
     }
   }
 }

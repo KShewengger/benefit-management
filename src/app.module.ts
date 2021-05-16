@@ -4,6 +4,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { TypeOrmProviderModule } from '@providers/typeorm/typeorm.module';
 import { CompaniesModule } from '@companies/companies.module';
 import { EmployeesModule } from '@employees/employees.module';
+import { PartnersModule } from '@partners/partners.module';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -16,7 +17,8 @@ import { AppService } from './app.service';
     }),
     TypeOrmProviderModule,
     CompaniesModule,
-    EmployeesModule
+    EmployeesModule,
+    PartnersModule
   ],
   controllers: [ AppController ],
   providers: [ AppService ],
