@@ -16,10 +16,6 @@ export class EmployeeService {
     private employeeRepository: Repository<Employee>
   ) {}
 
-  async getAllEmployees(): Promise<Employee[]> {
-    return this.employeeRepository.find();
-  }
-
   async getEmployeesExpenditures(
     id: number,
     filterDto: GetEmployeesExpendituresFilterDto

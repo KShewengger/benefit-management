@@ -10,5 +10,7 @@ export class Partner extends BaseEntity {
   @Column()
   name: string;
 
+  // voucher
+
 }
 

@@ -1,7 +1,7 @@
 import { ObjectType, Field, ID, Int } from '@nestjs/graphql';
 
 
-@ObjectType('Partner')
+@ObjectType('PartnerType')
 export class PartnerType {
 
   @Field(type => ID)
@@ -10,22 +10,15 @@ export class PartnerType {
   @Field()
   name: string;
 
+  // voucher
+
 }
 
 @ObjectType('PartnerRevenue')
-export class PartnerRevenueType {
-
-  @Field(type => ID)
-  partner_id: number;
-
-  @Field()
-  partner_name: string;
+export class PartnerRevenueType extends PartnerType {
 
   @Field(type => Int)
   voucher_quantity_sold: number;
-
-  @Field(type => Int)
-  voucher_amount: number;
 
   @Field(type => Int)
   total_revenue: number;

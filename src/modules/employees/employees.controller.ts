@@ -14,11 +14,6 @@ export class EmployeesController {
 
   constructor(private employeeService: EmployeeService) {}
 
-  @Get()
-  async getAllCompanies(): Promise<Employee[]> {
-    return this.employeeService.getAllEmployees();
-  }
-
   @Get('/expenditures')
   async getEmployeesExpenditures(
     @Param('id', ParseIntPipe) id: number,

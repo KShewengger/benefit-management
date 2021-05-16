@@ -1,6 +1,6 @@
 import { Resolver, Query, Args } from '@nestjs/graphql';
 
-import { CompanyType, CompanyEmployeeType } from '@companies/common/company.type';
+import { CompanyType } from '@companies/common/company.type';
 import { CompanyService } from '@companies/providers/company.service';
 
 
@@ -10,11 +10,6 @@ export class CompanyResolver {
   constructor(private companyService: CompanyService) {}
 
   @Query(returns => [CompanyType])
-  async companies() {
-    return this.companyService.getAllCompanies();
-  }
-
-  @Query(returns => [CompanyEmployeeType])
   async companyEmployees() {
     return [];
   }

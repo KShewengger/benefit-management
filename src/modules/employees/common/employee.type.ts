@@ -1,5 +1,7 @@
 import { ObjectType, Field, ID, Int } from '@nestjs/graphql';
 
+import { CompanyType } from '@companies/common/company.type';
+
 
 @ObjectType('Employee')
 export class EmployeeType {
@@ -10,16 +12,15 @@ export class EmployeeType {
   @Field()
   title: string;
 
+  @Field(type => [CompanyType])
+  company: CompanyType
+
 }
 
 @ObjectType('EmployeeExpenditure')
-export class EmployeeExpenditureType {
+export class EmployeeExpenditureType extends EmployeeType {
 
-  @Field(type => ID)
-  employee_id: number;
-
-  @Field()
-  employee_name: string;
+  // orders
 
   @Field(type => Int)
   total_spent: number;

@@ -15,10 +15,6 @@ export class PartnerService {
     private partnerRepository: Repository<Partner>
   ) {}
 
-  async getAllPartners(): Promise<Partner[]> {
-    return this.partnerRepository.find();
-  }
-
   async getPartnerRevenue(id: number): Promise<PartnerRevenueResponse[]> {
     return [];
   }

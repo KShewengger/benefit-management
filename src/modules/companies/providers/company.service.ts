@@ -16,10 +16,6 @@ export class CompanyService {
     private companyRepository: Repository<Company>
   ) {}
 
-  async getAllCompanies(): Promise<Company[]> {
-    return this.companyRepository.find();
-  }
-
   async getCompanyEmployees(
     id: number,
     filterDto: GetCompanyEmployeesFilterDto
