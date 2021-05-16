@@ -1,0 +1,5 @@
+db:
+  host: 'localhost'
+  database: 'benefit_management'
+  username: 'postgres'
+  password: ''
