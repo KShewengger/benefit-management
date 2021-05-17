@@ -21,10 +21,7 @@ export class Voucher extends BaseEntity {
   partnerId: number;
 
   @OneToMany(() => Order, order => order.voucher, { eager: true })
-  @JoinColumn({ name: 'orderId' })
   orders: Order[];
-
-  orderId: number;
 
 }
 

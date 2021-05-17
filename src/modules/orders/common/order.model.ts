@@ -1,6 +1,6 @@
 export interface OrderModel {
   readonly id: number;
-  orderDate: number;
+  orderDate: Date;
   employeeId: number;
   voucherId: number;
 }

@@ -1,4 +1,4 @@
-import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToMany, JoinColumn } from 'typeorm';
+import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, ManyToOne, ManyToMany, JoinColumn } from 'typeorm';
 
 import { Company } from '@companies/common/company.entity';
 import { Order } from '@orders/common/order.entity';
@@ -7,7 +7,7 @@ import { Order } from '@orders/common/order.entity';
 @Entity()
 export class Employee extends BaseEntity {
 
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn({ unsigned: true })
   id: number;
 
   @Column()
@@ -23,7 +23,7 @@ export class Employee extends BaseEntity {
   @Column()
   companyId: number;
 
-  @OneToMany(() => Order, order => order.employee, { eager: true })
+  @ManyToMany(() => Order, order => order.employee, { eager: true })
   @JoinColumn({ name: 'orderId' })
   orders: Order[];
 
