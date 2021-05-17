@@ -1,7 +1,7 @@
 import { Resolver, Query, ResolveField, Parent } from "@nestjs/graphql";
 
 import { EmployeeType } from '@employees/common/employee.type';
-import { EmployeeService } from '@employees/providers/employee.service';
+import { EmployeeService } from '@shared/employee/employee.service';
 import { Employee } from '@employees/common/employee.entity';
 
 import { Company } from '@companies/common/company.entity';

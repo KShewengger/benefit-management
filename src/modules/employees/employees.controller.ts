@@ -1,7 +1,7 @@
 import { Controller, Get } from '@nestjs/common';
 import { Logger } from '@nestjs/common';
 
-import { EmployeeService } from '@employees/providers/employee.service';
+import { EmployeeService } from '@shared/employee/employee.service';
 import { Employee } from '@employees/common/employee.entity';
 
 

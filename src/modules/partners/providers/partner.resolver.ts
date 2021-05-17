@@ -23,7 +23,7 @@ export class PartnerResolver {
 
   @ResolveField(() => [ Voucher ])
   async vouchers(@Parent() partner: Partner) {
-    return this.voucherService.getAllVouchers(partner.id);
+    return this.voucherService.getVouchersByPartnerId(partner.id);
   }
 
 }

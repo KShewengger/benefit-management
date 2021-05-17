@@ -1,4 +1,4 @@
-import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, ManyToOne, ManyToMany, JoinColumn } from 'typeorm';
+import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, ManyToOne, ManyToMany, JoinColumn, JoinTable } from 'typeorm';
 
 import { Company } from '@companies/common/company.entity';
 import { Order } from '@orders/common/order.entity';
@@ -24,7 +24,7 @@ export class Employee extends BaseEntity {
   companyId: number;
 
   @ManyToMany(() => Order, order => order.employee, { eager: true })
-  @JoinColumn({ name: 'orderId' })
+  @JoinTable()
   orders: Order[];
 
   orderId: number;
