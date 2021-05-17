@@ -19,4 +19,6 @@ export class VoucherType {
   @Field(type => [ OrderType ])
   orders: OrderType[]
 
+  totalRevenue: number;
+
 }

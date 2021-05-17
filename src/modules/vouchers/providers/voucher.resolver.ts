@@ -1,4 +1,4 @@
-import { Resolver, Query, ResolveField, Parent } from '@nestjs/graphql';
+import { Resolver, Query, ResolveField, Parent, Float } from '@nestjs/graphql';
 
 import { VoucherType } from '@vouchers/common/voucher.type';
 import { VoucherService } from '@shared/voucher/voucher.service';
@@ -24,6 +24,12 @@ export class VoucherResolver {
   @ResolveField(() => Partner)
   async partner(@Parent() voucher: Voucher) {
     return this.partnerService.getPartner(voucher.partnerId);
+  }
+
+  @ResolveField(() => Float)
+  async totalRevenue(@Parent() voucher: Voucher) {
+    const { amount, orders } = voucher;
+    return amount * orders.length;
   }
 
 }
