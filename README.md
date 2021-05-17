@@ -18,7 +18,9 @@ $ npm install
 
 2.) Setup your database configuration on /config/development.yml 
 
-3.) Run Seed to seed our database: $ npm run seed
+3.) Run Seed script to seed your database with mock data: 
+   
+   $ npm run seed
 ```  
 
 ## Running the app
@@ -29,6 +31,12 @@ $ npm run start
 
 # watch mode
 $ npm run start:dev
+```
+
+## Endpoints
+```bash
+# graphql playground
+http://localhost:3000/graphql
 ```
 
 
