@@ -14,8 +14,10 @@ export class OrderService {
     private orderRepository: Repository<Order>
   ) {}
 
-  async getAllOrders(): Promise<Order[]> {
-    return this.orderRepository.find();
+  async getAllOrders(employeeId?: number): Promise<Order[]> {
+    return employeeId
+      ? this.orderRepository.find({ employeeId })
+      : this.orderRepository.find();
   }
 
 }

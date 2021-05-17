@@ -2,7 +2,7 @@ import { Resolver, Query, ResolveField, Parent } from "@nestjs/graphql";
 
 import { OrderType } from '@orders/common/order.type';
 import { Order } from '@orders/common/order.entity';
-import { OrderService } from '@orders/providers/order.service';
+import { OrderService } from '@shared/order/order.service';
 
 import { Voucher } from '@vouchers/common/voucher.entity';
 import { VoucherService } from '@shared/voucher/voucher.service';
