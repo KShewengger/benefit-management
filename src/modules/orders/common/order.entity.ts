@@ -1,4 +1,4 @@
-import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, ManyToMany, ManyToOne, JoinColumn } from 'typeorm';
+import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm';
 
 import { Employee } from '@employees/common/employee.entity';
 import { Voucher } from '@vouchers/common/voucher.entity';
@@ -13,7 +13,7 @@ export class Order extends BaseEntity {
   @Column()
   orderDate: Date;
 
-  @ManyToMany(() => Employee, employee => employee.orders, { eager: false })
+  @ManyToOne(() => Employee, employee => employee.orders, { eager: false })
   @JoinColumn({ name: 'employeeId' })
   employee: Employee;
 

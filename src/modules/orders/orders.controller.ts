@@ -1,7 +1,7 @@
 import { Controller, Get } from '@nestjs/common';
 import { Logger } from '@nestjs/common';
 
-import { OrderService } from '@orders/providers/order.service';
+import { OrderService } from '@shared/order/order.service';
 import { Order } from '@orders/common/order.entity';
 
 
