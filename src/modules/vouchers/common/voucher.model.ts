@@ -3,3 +3,10 @@ export interface VoucherModel {
   partnerId: number;
   amount: number;
 }
+
+export interface VoucherTransaction {
+  id: number;
+  amount: number;
+  quantitySold: number;
+  totalRevenue: number;
+}
