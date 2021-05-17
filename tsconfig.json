@@ -20,6 +20,7 @@
       "@employees/*": ["src/modules/employees/*"],
       "@partners/*": ["src/modules/partners/*"],
       "@vouchers/*": ["src/modules/vouchers/*"],
+      "@orders/*": ["src/modules/orders/*"]
     }
   }
 }

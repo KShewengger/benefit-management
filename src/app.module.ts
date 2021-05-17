@@ -6,6 +6,7 @@ import { CompaniesModule } from '@companies/companies.module';
 import { EmployeesModule } from '@employees/employees.module';
 import { PartnersModule } from '@partners/partners.module';
 import { VouchersModule } from '@vouchers/vouchers.module';
+import { OrdersModule } from '@orders/orders.module';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -20,7 +21,8 @@ import { AppService } from './app.service';
     CompaniesModule,
     EmployeesModule,
     PartnersModule,
-    VouchersModule
+    VouchersModule,
+    OrdersModule
   ],
   controllers: [ AppController ],
   providers: [ AppService ],
