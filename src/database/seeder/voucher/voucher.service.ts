@@ -3,8 +3,9 @@ import { InjectRepository } from '@nestjs/typeorm';
 
 import { Repository } from 'typeorm';
 
-import { Voucher } from '@vouchers/common/voucher.entity';
+import { SeedCreateService } from '@seeder/shared/seed-create/seed-create.service';
 
+import { Voucher } from '@vouchers/common/voucher.entity';
 import { VOUCHERS } from './voucher.data';
 
 
@@ -14,16 +15,11 @@ export class VoucherSeederService {
   constructor(
     @InjectRepository(Voucher)
     private readonly voucherRepository: Repository<Voucher>,
+    private seedCreateService: SeedCreateService
   ) {}
 
   async create(): Promise<number> {
-    for (const voucher of VOUCHERS) {
-      await this.voucherRepository
-        .save(voucher)
-        .catch(error => Promise.reject(error))
-    }
-
-    return Promise.resolve(VOUCHERS.length);
+    return this.seedCreateService.create(VOUCHERS, this.voucherRepository);
   }
 
 }

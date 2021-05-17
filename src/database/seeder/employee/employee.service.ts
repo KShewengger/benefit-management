@@ -3,8 +3,9 @@ import { InjectRepository } from '@nestjs/typeorm';
 
 import { Repository } from 'typeorm';
 
-import { Employee } from '@employees/common/employee.entity';
+import { SeedCreateService } from '@seeder/shared/seed-create/seed-create.service';
 
+import { Employee } from '@employees/common/employee.entity';
 import { EMPLOYEES } from './employee.data';
 
 
@@ -14,16 +15,11 @@ export class EmployeeSeederService {
   constructor(
     @InjectRepository(Employee)
     private readonly employeeRepository: Repository<Employee>,
+    private seedCreateService: SeedCreateService
   ) {}
 
   async create(): Promise<number> {
-    for (const employee of EMPLOYEES) {
-      await this.employeeRepository
-        .save(employee)
-        .catch(error => Promise.reject(error))
-    }
-
-    return Promise.resolve(EMPLOYEES.length);
+    return this.seedCreateService.create(EMPLOYEES, this.employeeRepository);
   }
 
 }
