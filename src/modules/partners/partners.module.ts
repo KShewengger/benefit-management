@@ -1,15 +1,18 @@
 import { Module } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm';
+
+import { VoucherSharedModule } from '@shared/voucher/voucher.module';
+import { PartnerSharedModule } from '@shared/partner/partner.module';
 
 import { PartnersController } from '@partners/partners.controller';
-import { PartnerService } from '@partners/providers/partner.service';
 import { PartnerResolver } from '@partners/providers/partner.resolver';
-import { PartnerRepository } from '@partners/providers/partner.repository';
 
 
 @Module({
-  imports: [ TypeOrmModule.forFeature([ PartnerRepository ]) ],
+  imports: [
+    PartnerSharedModule,
+    VoucherSharedModule
+  ],
   controllers: [ PartnersController ],
-  providers: [ PartnerService, PartnerResolver ]
+  providers: [ PartnerResolver ]
 })
 export class PartnersModule {}

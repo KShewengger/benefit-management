@@ -12,7 +12,7 @@ export class Voucher extends BaseEntity {
   @Column()
   amount: number;
 
-  @ManyToOne(type => Partner, partner => partner.voucher, { eager: true })
+  @ManyToOne(type => Partner, partner => partner.vouchers, { eager: false })
   @JoinColumn({ name: 'partnerId' })
   partner: Partner;
 

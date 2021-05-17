@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
-import { CompanyService } from './company/company.service';
-import { CompanyRepository } from './company/company.repository';
+import { CompanyService } from './company.service';
+import { CompanyRepository } from './company.repository';
 
 
 @Module({
@@ -10,4 +10,4 @@ import { CompanyRepository } from './company/company.repository';
   providers: [ CompanyService ],
   exports: [ CompanyService ]
 })
-export class SharedModule {}
+export class CompanySharedModule {}

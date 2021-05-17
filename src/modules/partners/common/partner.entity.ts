@@ -12,8 +12,10 @@ export class Partner extends BaseEntity {
   @Column()
   name: string;
 
-  @OneToMany(type => Voucher, voucher => voucher.partner, { eager: false })
-  voucher: Voucher
+  @OneToMany(type => Voucher, voucher => voucher.partner, { eager: true })
+  vouchers: Voucher[]
+
+  voucherId: number;
 
 }
 

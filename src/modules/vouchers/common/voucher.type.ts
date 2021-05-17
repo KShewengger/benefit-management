@@ -12,7 +12,7 @@ export class VoucherType {
   @Field(type => Int)
   amount: number;
 
-  @Field(type => [ PartnerType ])
+  @Field(type => PartnerType)
   partner: PartnerType
 
 }

@@ -1,12 +1,12 @@
 import { Module } from '@nestjs/common';
 
-import { SharedModule } from '@shared/shared.module';
+import { CompanySharedModule } from '@shared/company/company.module';
 import { CompaniesController } from '@companies/companies.controller';
 import { CompanyResolver } from '@companies/providers/company.resolver';
 
 
 @Module({
-  imports: [ SharedModule ],
+  imports: [ CompanySharedModule ],
   controllers: [ CompaniesController ],
   providers: [ CompanyResolver ]
 })

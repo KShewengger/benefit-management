@@ -14,8 +14,10 @@ export class VoucherService {
     private voucherRepository: Repository<Voucher>
   ) {}
 
-  async getAllVouchers(): Promise<Voucher[]> {
-    return this.voucherRepository.find();
+  async getAllVouchers(partnerId?: number): Promise<Voucher[]> {
+    return partnerId
+      ? this.voucherRepository.find({ partnerId })
+      : this.voucherRepository.find();
   }
 
 }

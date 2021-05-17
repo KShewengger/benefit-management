@@ -1,7 +1,7 @@
 import { Controller, Get } from '@nestjs/common';
 import { Logger } from '@nestjs/common';
 
-import { VoucherService } from '@vouchers/providers/voucher.service';
+import { VoucherService } from '@shared/voucher/voucher.service';
 import { Voucher } from '@vouchers/common/voucher.entity';
 
 

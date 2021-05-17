@@ -18,4 +18,8 @@ export class PartnerService {
     return this.partnerRepository.find();
   }
 
+  async getPartner(id: number): Promise<Partner> {
+    return this.partnerRepository.findOne({ id });
+  }
+
 }
