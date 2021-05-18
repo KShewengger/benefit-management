@@ -1,6 +1,6 @@
 import { ObjectType, Field, ID, Int } from '@nestjs/graphql';
 
-import { EmployeeType } from '@employees/models/employee.type';
+import { EmployeeType } from '@employees/types/employee.type';
 
 
 @ObjectType('Company')

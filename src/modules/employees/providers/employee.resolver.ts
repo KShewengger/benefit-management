@@ -1,8 +1,10 @@
-import { Resolver, Query, ResolveField, Parent } from '@nestjs/graphql';
+import { Resolver, Query, ResolveField, Parent, Args } from '@nestjs/graphql';
 
-import { EmployeeType } from '@employees/models/employee.type';
+import { EmployeeType } from '@employees/types/employee.type';
+import { EmployeeBenefitStatusType } from '@employees/types/employee-benefit.type';
 import { EmployeeService } from '@shared/employee/employee.service';
 import { Employee } from '@employees/models/employee.entity';
+import { GetEmployeesBenefitStatusArgs } from '@employees/dto/get-employees-benefit-status.dto';
 
 import { Company } from '@companies/models/company.entity';
 import { CompanyService } from '@shared/company/company.service';
@@ -23,6 +25,12 @@ export class EmployeeResolver {
   @Query(() => [ EmployeeType ])
   async employees() {
     return this.employeeService.getAllEmployees();
+  }
+
+  @Query(() => [ EmployeeBenefitStatusType ])
+  async employeesBenefitStatus(@Args() getEmployeesBenefitArgs: GetEmployeesBenefitStatusArgs) {
+    console.log(getEmployeesBenefitArgs);
+    return [];
   }
 
   @ResolveField(() => Company)
