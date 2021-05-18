@@ -2,7 +2,7 @@ import { Controller, Get } from '@nestjs/common';
 import { Logger } from '@nestjs/common';
 
 import { EmployeeService } from '@shared/employee/employee.service';
-import { Employee } from '@employees/common/employee.entity';
+import { Employee } from '@employees/models/employee.entity';
 
 
 @Controller('employees')

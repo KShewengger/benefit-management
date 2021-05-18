@@ -2,7 +2,7 @@ import { Controller, Get } from '@nestjs/common';
 import { Logger } from '@nestjs/common';
 
 import { CompanyService } from '@shared/company/company.service';
-import { Company } from '@companies/common/company.entity';
+import { Company } from '@companies/models/company.entity';
 
 
 @Controller('companies')

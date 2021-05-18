@@ -1,7 +1,7 @@
 import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm';
 
-import { Employee } from '@employees/common/employee.entity';
-import { Voucher } from '@vouchers/common/voucher.entity';
+import { Employee } from '@employees/models/employee.entity';
+import { Voucher } from '@vouchers/models/voucher.entity';
 
 
 @Entity()

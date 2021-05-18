@@ -1,6 +1,6 @@
 import { EntityRepository, Repository } from 'typeorm';
 
-import { Company } from '@companies/common/company.entity';
+import { Company } from '@companies/models/company.entity';
 
 
 @EntityRepository(Company)

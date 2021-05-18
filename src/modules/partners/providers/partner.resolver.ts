@@ -1,11 +1,11 @@
 import { Resolver, Query, ResolveField, Parent, Args, Int } from '@nestjs/graphql';
 
-import { PartnerRevenueType, PartnerType } from '@partners/common/partner.type';
+import { PartnerRevenueType, PartnerType } from '@partners/models/partner.type';
 import { PartnerService } from '@shared/partner/partner.service';
 import { VoucherService } from '@shared/voucher/voucher.service';
 
-import { Voucher } from '@vouchers/common/voucher.entity';
-import { Partner } from '@partners/common/partner.entity';
+import { Voucher } from '@vouchers/models/voucher.entity';
+import { Partner } from '@partners/models/partner.entity';
 
 
 @Resolver(() => PartnerType)

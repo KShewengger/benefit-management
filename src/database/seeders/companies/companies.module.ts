@@ -3,7 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { SeedCreateSharedModule } from '@seeders/shared/seed-create/seed-create.module';
 
-import { Company } from '@companies/common/company.entity';
+import { Company } from '@companies/models/company.entity';
 import { CompanySeederService } from './companies.service';
 
 

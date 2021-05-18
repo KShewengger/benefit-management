@@ -1,6 +1,6 @@
 import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
 
-import { Employee } from '@employees/common/employee.entity';
+import { Employee } from '@employees/models/employee.entity';
 
 
 @Entity()

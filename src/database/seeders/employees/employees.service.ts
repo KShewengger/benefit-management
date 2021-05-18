@@ -5,7 +5,7 @@ import { Repository } from 'typeorm';
 
 import { SeedCreateService } from '@seeders/shared/seed-create/seed-create.service';
 
-import { Employee } from '@employees/common/employee.entity';
+import { Employee } from '@employees/models/employee.entity';
 import { EMPLOYEES } from './employees.data';
 
 

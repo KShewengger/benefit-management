@@ -1,6 +1,6 @@
 import { EntityRepository, Repository } from 'typeorm';
 
-import { Employee } from '@employees/common/employee.entity';
+import { Employee } from '@employees/models/employee.entity';
 
 
 @EntityRepository(Employee)

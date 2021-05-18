@@ -1,4 +1,4 @@
-import { Partner } from '@partners/common/partner.model';
+import { Partner } from '@partners/models/partner.model';
 
 
 export const PARTNERS: Partner[] = [

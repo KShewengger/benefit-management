@@ -1,7 +1,7 @@
 import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToMany, JoinColumn } from 'typeorm';
 
-import { Company } from '@companies/common/company.entity';
-import { Order } from '@orders/common/order.entity';
+import { Company } from '@companies/models/company.entity';
+import { Order } from '@orders/models/order.entity';
 
 
 @Entity()

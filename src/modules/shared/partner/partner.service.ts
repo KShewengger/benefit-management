@@ -3,8 +3,8 @@ import { InjectRepository } from '@nestjs/typeorm';
 
 import { Repository } from 'typeorm';
 
-import { Partner } from '@partners/common/partner.entity';
-import { PartnerRevenue } from '@partners/common/partner.model';
+import { Partner } from '@partners/models/partner.entity';
+import { PartnerRevenue } from '@partners/models/partner.model';
 
 
 @Injectable()

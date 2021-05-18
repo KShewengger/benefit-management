@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 
 import { Repository } from 'typeorm';
 
-import { Voucher } from '@vouchers/common/voucher.entity';
+import { Voucher } from '@vouchers/models/voucher.entity';
 
 
 @Injectable()

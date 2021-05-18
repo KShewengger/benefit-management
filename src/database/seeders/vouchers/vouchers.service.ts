@@ -5,7 +5,7 @@ import { Repository } from 'typeorm';
 
 import { SeedCreateService } from '@seeders/shared/seed-create/seed-create.service';
 
-import { Voucher } from '@vouchers/common/voucher.entity';
+import { Voucher } from '@vouchers/models/voucher.entity';
 import { VOUCHERS } from './vouchers.data';
 
 

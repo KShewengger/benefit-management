@@ -1,4 +1,4 @@
-import { Voucher } from '@vouchers/common/voucher.model';
+import { Voucher } from '@vouchers/models/voucher.model';
 
 
 export const VOUCHERS: Voucher[] = [

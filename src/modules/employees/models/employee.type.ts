@@ -1,7 +1,7 @@
 import { ObjectType, Field, ID, Int } from '@nestjs/graphql';
 
-import { CompanyType } from '@companies/common/company.type';
-import { OrderType } from '@orders/common/order.type';
+import { CompanyType } from '@companies/models/company.type';
+import { OrderType } from '@orders/models/order.type';
 
 
 @ObjectType('Employee')

@@ -3,7 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { SeedCreateSharedModule } from '@seeders/shared/seed-create/seed-create.module';
 
-import { Employee } from '@employees/common/employee.entity';
+import { Employee } from '@employees/models/employee.entity';
 import { EmployeeSeederService } from './employees.service';
 
 

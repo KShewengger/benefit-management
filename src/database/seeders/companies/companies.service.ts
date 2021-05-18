@@ -5,7 +5,7 @@ import { Repository } from 'typeorm';
 
 import { SeedCreateService } from '@seeders/shared/seed-create/seed-create.service';
 
-import { Company } from '@companies/common/company.entity';
+import { Company } from '@companies/models/company.entity';
 import { COMPANIES } from './companies.data';
 
 

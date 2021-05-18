@@ -1,6 +1,6 @@
 import { ObjectType, Field, ID, Int } from '@nestjs/graphql';
 
-import { VoucherTransactionType, VoucherType } from "@vouchers/common/voucher.type";
+import { VoucherTransactionType, VoucherType } from '@vouchers/models/voucher.type';
 
 
 @ObjectType()

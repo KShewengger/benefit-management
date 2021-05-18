@@ -1,6 +1,6 @@
 import { EntityRepository, Repository } from 'typeorm';
 
-import { Order } from '@orders/common/order.entity';
+import { Order } from '@orders/models/order.entity';
 
 
 @EntityRepository(Order)

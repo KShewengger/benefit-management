@@ -2,7 +2,7 @@ import { Controller, Get } from '@nestjs/common';
 import { Logger } from '@nestjs/common';
 
 import { OrderService } from '@shared/order/order.service';
-import { Order } from '@orders/common/order.entity';
+import { Order } from '@orders/models/order.entity';
 
 
 @Controller('orders')

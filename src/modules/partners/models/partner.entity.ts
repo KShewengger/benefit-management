@@ -1,6 +1,6 @@
 import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
 
-import { Voucher } from '@vouchers/common/voucher.entity';
+import { Voucher } from '@vouchers/models/voucher.entity';
 
 
 @Entity()

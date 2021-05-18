@@ -1,4 +1,4 @@
-import { VoucherTransaction } from '@vouchers/common/voucher.model';
+import { VoucherTransaction } from '@vouchers/models/voucher.model';
 
 
 export interface Partner {

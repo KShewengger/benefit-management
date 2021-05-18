@@ -1,13 +1,13 @@
 import { Resolver, Query, ResolveField, Parent } from '@nestjs/graphql';
 
-import { OrderType } from '@orders/common/order.type';
-import { Order } from '@orders/common/order.entity';
+import { OrderType } from '@orders/models/order.type';
+import { Order } from '@orders/models/order.entity';
 import { OrderService } from '@shared/order/order.service';
 
-import { Voucher } from '@vouchers/common/voucher.entity';
+import { Voucher } from '@vouchers/models/voucher.entity';
 import { VoucherService } from '@shared/voucher/voucher.service';
 
-import { Employee } from '@employees/common/employee.entity';
+import { Employee } from '@employees/models/employee.entity';
 import { EmployeeService } from '@shared/employee/employee.service';
 
 

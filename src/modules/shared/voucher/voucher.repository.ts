@@ -1,6 +1,6 @@
 import { EntityRepository, Repository } from 'typeorm';
 
-import { Voucher } from '@vouchers/common/voucher.entity';
+import { Voucher } from '@vouchers/models/voucher.entity';
 
 
 @EntityRepository(Voucher)
