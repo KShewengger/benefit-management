@@ -1,4 +1,4 @@
-import { Resolver, Query, ResolveField, Parent } from "@nestjs/graphql";
+import { Resolver, Query, ResolveField, Parent } from '@nestjs/graphql';
 
 import { OrderType } from '@orders/common/order.type';
 import { Order } from '@orders/common/order.entity';

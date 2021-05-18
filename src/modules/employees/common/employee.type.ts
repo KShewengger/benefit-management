@@ -23,19 +23,3 @@ export class EmployeeType {
   orders: OrderType[]
 
 }
-
-@ObjectType('EmployeeExpenditure')
-export class EmployeeExpenditureType extends EmployeeType {
-
-  // orders
-
-  @Field(type => Int)
-  totalSpent: number;
-
-  @Field(type => Int)
-  netSalary: number;
-
-  @Field(type => Int)
-  tax: number;
-
-}

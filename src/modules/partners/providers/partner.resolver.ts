@@ -1,6 +1,6 @@
-import { Resolver, Query, ResolveField, Parent, Args, Int } from "@nestjs/graphql";
+import { Resolver, Query, ResolveField, Parent, Args, Int } from '@nestjs/graphql';
 
-import { PartnerRevenueType, PartnerType } from "@partners/common/partner.type";
+import { PartnerRevenueType, PartnerType } from '@partners/common/partner.type';
 import { PartnerService } from '@shared/partner/partner.service';
 import { VoucherService } from '@shared/voucher/voucher.service';
 

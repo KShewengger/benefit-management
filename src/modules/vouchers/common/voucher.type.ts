@@ -18,12 +18,6 @@ export abstract class Voucher {
 @ObjectType('Voucher')
 export class VoucherType extends Voucher {
 
-  @Field(type => ID)
-  id: number;
-
-  @Field(type => Int)
-  amount: number;
-
   @Field(type => PartnerType)
   partner: PartnerType
 

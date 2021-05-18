@@ -1,12 +1,13 @@
-export interface VoucherModel {
+interface VoucherCommon {
   readonly id: number;
-  partnerId: number;
   amount: number;
 }
 
-export interface VoucherTransaction {
-  id: number;
-  amount: number;
+export interface Voucher extends VoucherCommon {
+  partnerId: number;
+}
+
+export interface VoucherTransaction extends VoucherCommon {
   quantitySold: number;
   totalRevenue: number;
 }

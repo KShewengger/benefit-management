@@ -1,7 +1,7 @@
-import { OrderModel } from '@orders/common/order.model';
+import { Order } from '@orders/common/order.model';
 
 
-export const ORDERS: OrderModel[] = [
+export const ORDERS: Order[] = [
   {
     id: 1,
     orderDate: new Date('2020-01-05'),

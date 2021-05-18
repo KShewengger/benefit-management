@@ -1,7 +1,7 @@
-import { EmployeeModel } from '@employees/common/employee.model';
+import { Employee } from '@employees/common/employee.model';
 
 
-export const EMPLOYEES: EmployeeModel[] = [
+export const EMPLOYEES: Employee[] = [
   { id: 1, name: 'Raffael', companyId: 1, monthlyBudget: 44 },
   { id: 2, name: 'Mathis', companyId: 1, monthlyBudget: 44  },
   { id: 3, name: 'Tim', companyId: 1, monthlyBudget: 44 },

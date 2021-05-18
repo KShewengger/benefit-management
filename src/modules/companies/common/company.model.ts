@@ -1,11 +1,4 @@
-export interface CompanyModel {
+export interface Company {
   readonly id: number;
   title: string;
-}
-
-export interface CompanyEmployeesResponse extends CompanyModel {
-  employeeId: number;
-  employeeName: string;
-  total: number;
-  date: Date;
 }
