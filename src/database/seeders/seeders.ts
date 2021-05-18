@@ -1,14 +1,14 @@
 import { Injectable, Logger, InternalServerErrorException } from '@nestjs/common';
 
-import { CompanySeederService } from '@seeder/company/company.service';
-import { EmployeeSeederService } from '@seeder/employee/employee.service';
-import { PartnerSeederService } from '@seeder/partner/partner.service';
-import { VoucherSeederService } from '@seeder/voucher/voucher.service';
-import { OrderSeederService } from '@seeder/order/order.service';
+import { CompanySeederService } from '@seeders/companies/companies.service';
+import { EmployeeSeederService } from '@seeders/employees/employees.service';
+import { PartnerSeederService } from '@seeders/partners/partners.service';
+import { VoucherSeederService } from '@seeders/vouchers/vouchers.service';
+import { OrderSeederService } from '@seeders/orders/orders.service';
 
 
 @Injectable()
-export class Seeder {
+export class Seeders {
   constructor(
     private logger: Logger,
     private companySeederService: CompanySeederService,

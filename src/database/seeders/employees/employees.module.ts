@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
-import { SeedCreateSharedModule } from '@seeder/shared/seed-create/seed-create.module';
+import { SeedCreateSharedModule } from '@seeders/shared/seed-create/seed-create.module';
 
 import { Employee } from '@employees/common/employee.entity';
-import { EmployeeSeederService } from './employee.service';
+import { EmployeeSeederService } from './employees.service';
 
 
 @Module({

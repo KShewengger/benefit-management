@@ -14,7 +14,7 @@
     "paths": {
       "@config/*": ["src/config/*"],
       "@providers/*": ["src/providers/*"],
-      "@seeder/*": ["src/database/seeder/*"],
+      "@seeders/*": ["src/database/seeders/*"],
       "@shared/*": ["src/modules/shared/*"],
       "@companies/*": ["src/modules/companies/*"],
       "@employees/*": ["src/modules/employees/*"],

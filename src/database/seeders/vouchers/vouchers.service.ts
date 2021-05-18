@@ -3,10 +3,10 @@ import { InjectRepository } from '@nestjs/typeorm';
 
 import { Repository } from 'typeorm';
 
-import { SeedCreateService } from '@seeder/shared/seed-create/seed-create.service';
+import { SeedCreateService } from '@seeders/shared/seed-create/seed-create.service';
 
 import { Voucher } from '@vouchers/common/voucher.entity';
-import { VOUCHERS } from './voucher.data';
+import { VOUCHERS } from './vouchers.data';
 
 
 @Injectable()
